@@ -10,18 +10,21 @@ contract ERC20AC is IERC20, AccessControl,ERC20Basic{
     constructor() ERC20("ERC20AC", "ERC") {
         _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
     }
+
     function promoteMinter(address minter) public onlyRole(DEFAULT_ADMIN_ROLE) {
         grantRole(MINTER_ROLE,minter);
     }
+
     function remoteMinter(address minter) public onlyRole(DEFAULT_ADMIN_ROLE) {
         revokeRole(MINTER_ROLE,minter);
     }
 
-    function mint(address recipient,
-        uint amount) public onlyRole(MINTER_ROLE){
+    function mint(address recipient, uint amount) public onlyRole(MINTER_ROLE){
         require(totalSupply+amount>=totalSupply);
+
         totalSupply+=amount;
         balances[recipient]+=amount;
+
         emit Transfer(address(0),recipient,amount);
     }
 }
