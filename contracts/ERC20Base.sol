@@ -2,15 +2,26 @@ pragma solidity >=0.4.22 <0.9.0;
 interface IERC20 {
 
     function totalSupply() external view returns (uint);
+
     function balanceOf(address account) external view returns (uint);
-    function allowance(address owner, address spender) external view returns (uint);
 
-    function transfer(address recipient, uint amount) external returns (bool);
-    function approve(address spender, uint amount) external returns (bool);
-    function transferFrom(address sender, address recipient, uint amount) external returns (bool);
+    function allowance(address owner,
+        address spender) external view returns (uint);
 
-    event Transfer(address indexed from, address indexed to, uint value);
-    event Approval(address indexed owner, address indexed spender, uint value);
+    function transfer(address recipient,
+        uint amount) external returns (bool);
+
+    function approve(address spender,
+        uint amount) external returns (bool);
+
+    function transferFrom(address sender,
+        address recipient, uint amount) external returns (bool);
+
+    event Transfer(address indexed from,
+        address indexed to, uint value);
+
+    event Approval(address indexed owner,
+        address indexed spender, uint value);
 }
 
 contract ERC20Basic is IERC20 {
@@ -35,7 +46,8 @@ contract ERC20Basic is IERC20 {
         return balances[account];
     }
 
-    function transfer(address recipient, uint amount) external override returns (bool) {
+    function transfer(address recipient,
+        uint amount) external override returns (bool) {
         require(amount <= balances[msg.sender]);
 
         balances[msg.sender] -=amount;
@@ -46,7 +58,8 @@ contract ERC20Basic is IERC20 {
         return true;
     }
 
-    function approve(address spender, uint amount) external override returns (bool) {
+    function approve(address spender,
+        uint amount) external override returns (bool) {
         allowed[msg.sender][spender] = amount;
 
         emit Approval(msg.sender, spender, amount);
@@ -54,11 +67,13 @@ contract ERC20Basic is IERC20 {
         return true;
     }
 
-    function allowance(address owner, address spender) external view override returns (uint) {
+    function allowance(address owner,
+        address spender) external view override returns (uint) {
         return allowed[owner][spender];
     }
 
-    function transferFrom(address sender, address recipient, uint amount) external override returns (bool) {
+    function transferFrom(address sender, address recipient,
+        uint amount) external override returns (bool) {
         require(amount <= balances[sender]);
         require(amount <= allowed[sender][msg.sender]);
 
