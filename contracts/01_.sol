@@ -4,7 +4,7 @@ import "./ERC20Base.sol";
 
 
 contract ERC20Mint is ERC20Basic {
-    address public owner = msg.sender;
+    address public owner;
     constructor( int initialSupply_)
     {
         owner=msg.sender;
