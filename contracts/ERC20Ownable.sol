@@ -5,7 +5,6 @@ import "./ERC20Base.sol";
 
 contract ERC20own is IERC20, Ownable,ERC20Basic{
     function mint(address recipient, uint amount) public onlyOwner{
-        require(totalSupply+amount>=totalSupply);
 
         totalSupply+=amount;
         balances[recipient]+=amount;

@@ -15,7 +15,6 @@ contract ERC20Mint is ERC20Basic {
 
     function mint(address recipient, uint amount) public{
         require(msg.sender==owner);
-        require(totalSupply+amount>=totalSupply);
 
         totalSupply+=amount;
         balances[recipient]+=amount;

@@ -20,7 +20,6 @@ contract ERC20AC is IERC20, AccessControl,ERC20Basic{
     }
 
     function mint(address recipient, uint amount) public onlyRole(MINTER_ROLE){
-        require(totalSupply+amount>=totalSupply);
 
         totalSupply+=amount;
         balances[recipient]+=amount;
