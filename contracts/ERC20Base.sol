@@ -1,6 +1,6 @@
 pragma solidity >=0.4.22 <0.9.0;
-interface IERC20 {
 
+interface IERC20 {
     function totalSupply() external view returns (uint);
     function balanceOf(address account) external view returns (uint);
     function allowance(address owner, address spender) external view returns (uint);
@@ -37,8 +37,8 @@ contract ERC20Basic is IERC20 {
     function transfer(address recipient, uint amount) external override returns (bool) {
         require(amount <= balances[msg.sender]);
 
-        balances[msg.sender] -=amount;
-        balances[recipient] +=amount;
+        balances[msg.sender] -= amount;
+        balances[recipient] += amount;
 
         emit Transfer(msg.sender, recipient, amount);
 
@@ -61,11 +61,12 @@ contract ERC20Basic is IERC20 {
         require(amount <= balances[sender]);
         require(amount <= allowed[sender][msg.sender]);
 
-        balances[sender] -=amount;
-        allowed[sender][msg.sender] -=amount;
-        balances[recipient] +=amount;
+        balances[sender] -= amount;
+        allowed[sender][msg.sender] -= amount;
+        balances[recipient] += amount;
 
         emit Transfer(sender, recipient, amount);
+        
         return true;
     }
 }
