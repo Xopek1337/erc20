@@ -1,4 +1,6 @@
-pragma solidity >=0.4.22 <0.9.0;
+// SPDX-License-Identifier: MIT
+
+pragma solidity >=0.8.0 <0.9.0;
 
 import "./ERC20Base.sol";
 
@@ -7,7 +9,7 @@ contract ERC20Mint is ERC20Basic {
 
     address public owner;
 
-    constructor(uint initialSupply_) {
+    constructor(uint initialSupply_){
         owner = msg.sender;
         totalSupply_ += initialSupply_;
         _balances[owner] = initialSupply_;
@@ -15,7 +17,6 @@ contract ERC20Mint is ERC20Basic {
 
     function mint(address recipient, uint amount) public{
         require(msg.sender == owner);
-        require(totalSupply+amount >= totalSupply);
 
         totalSupply += amount;
         balances[recipient] += amount;
