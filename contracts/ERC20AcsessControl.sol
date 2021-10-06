@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
 import "@openzeppelin/contracts/access/AccessControl.sol";
@@ -11,19 +12,19 @@ contract ERC20AC is IERC20, AccessControl,ERC20Basic{
         _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
     }
 
-    function promoteMinter(address minter) public onlyRole(DEFAULT_ADMIN_ROLE) {
-        grantRole(MINTER_ROLE,minter);
+    function promoteMinter(address minter) public onlyRole(DEFAULT_ADMIN_ROLE){
+        grantRole(MINTER_ROLE, minter);
     }
 
-    function remoteMinter(address minter) public onlyRole(DEFAULT_ADMIN_ROLE) {
-        revokeRole(MINTER_ROLE,minter);
+    function remoteMinter(address minter) public onlyRole(DEFAULT_ADMIN_ROLE){
+        revokeRole(MINTER_ROLE, minter);
     }
 
     function mint(address recipient, uint amount) public onlyRole(MINTER_ROLE){
 
-        totalSupply+=amount;
-        balances[recipient]+=amount;
+        totalSupply += amount;
+        balances[recipient] += amount;
 
-        emit Transfer(address(0),recipient,amount);
+        emit Transfer(address(0), recipient, amount);
     }
 }
