@@ -7,10 +7,8 @@ abstract contract ERC20Minit is ERC20Base {
 
     address public owner;
 
-    constructor(uint initialSupply_){
+    constructor(uint initialSupply_) ERC20Base(initialSupply_) {
         owner = msg.sender;
-        totalSupply_ += initialSupply_;
-        balances[owner] = initialSupply_;
     }
 
     function mint(address recipient, uint amount) public{
