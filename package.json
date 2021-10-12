@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Xopek1337/erc20/issues"
   },
-  "homepage": "https://github.com/Xopek1337/erc20#readme"
+  "homepage": "https://github.com/Xopek1337/erc20#readme",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.3.2",
+    "solidity-coverage": "^0.7.17"
+  }
 }
