@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6681b75f-98dd-439b-934c-7a76554ef6c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/ERC20AcsessControl.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/ERC20AcsessControl.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/ERC20Base.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/ERC20Base.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/ERC20Minit.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/ERC20Minit.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/ERC20Ownable.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/ERC20Ownable.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/02_test_Mint.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/02_test_Mint.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +64,7 @@
       <workItem from="1633626023395" duration="2293000" />
       <workItem from="1633873067602" duration="11976000" />
       <workItem from="1633969653325" duration="5107000" />
-      <workItem from="1634042833041" duration="3561000" />
+      <workItem from="1634042833041" duration="3926000" />
     </task>
     <servers />
   </component>

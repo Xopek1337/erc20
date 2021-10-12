@@ -17,6 +17,6 @@ describe('ERC20TestMinit', function () {
 
         const accountEndingBalance = (await ERC20MintInstance.balanceOf.call(accountOne)).toNumber();
 
-        assert.equal(accountOneEndingBalance, accountOneStartingBalance + amount, "Amount wasn't correctly taken eth");
+        assert.equal(accountEndingBalance, accountStartingBalance + amount, "Amount wasn't correctly taken eth");
     });
 });
