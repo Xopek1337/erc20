@@ -1,11 +1,6 @@
 // SPDX-License-Identifier: MIT
-<<<<<<< HEAD
 pragma solidity >=0.8.0 <0.9.0;
-interface IERC20 {
-=======
 
-pragma solidity >=0.8.0 <0.9.0;
->>>>>>> b994856167a68ae4a7750a8a913420ffde08af62
 
 
 interface IERC20 {
