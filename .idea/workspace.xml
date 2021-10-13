@@ -7,7 +7,27 @@
     <list default="true" id="6681b75f-98dd-439b-934c-7a76554ef6c0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/ERC20Minit.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/ERC20Minit.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/contracts/ERC20AcsessControl.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/contracts/ERC20AcsessControl.sol.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/contracts/ERC20Base.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/contracts/ERC20Base.sol.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/contracts/ERC20Minit.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/contracts/ERC20Minit.sol.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/contracts/ERC20Ownable.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/contracts/ERC20Ownable.sol.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/contracts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/contracts/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20AcsessControl.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20AcsessControl.sol.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20Base.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20Base.sol.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20Minit.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20Minit.sol.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20Ownable.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20Ownable.sol.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/contracts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/contracts/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/02_test_Mint.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/02_test_Mint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/testfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +86,8 @@
       <workItem from="1633626023395" duration="2293000" />
       <workItem from="1633873067602" duration="11976000" />
       <workItem from="1633969653325" duration="5107000" />
-      <workItem from="1634042833041" duration="5437000" />
+      <workItem from="1634042833041" duration="7486000" />
+      <workItem from="1634120039256" duration="4606000" />
     </task>
     <servers />
   </component>

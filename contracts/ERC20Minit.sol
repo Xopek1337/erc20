@@ -3,7 +3,7 @@ pragma solidity >=0.8.0 <0.9.0;
 
 import "./ERC20Base.sol";
 
-abstract contract ERC20Minit is ERC20Base {
+contract ERC20Minit is ERC20Base {
 
     address public owner;
 

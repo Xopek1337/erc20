@@ -1,7 +1,7 @@
 let accounts;
 
 const ERC20Basic = artifacts.require("./ERC20Base");
-
+const truffleAssert = require('truffle-assertions');
 describe('ERC20TestBase', function () {
     beforeEach(async () => {
         accounts = await web3.eth.getAccounts();
@@ -75,5 +75,12 @@ describe('ERC20TestBase', function () {
         const alowedBalance = (await ERC20BasicInstance.allowance(accountOne,accountTwo)).toNumber();
 
         assert.equal(amount, alowedBalance, "Amount wasn't correctly approve from the sender");
+    });
+    it('should not transfer token if amount exceed balance', async () => {
+        const ERC20BasicInstance = await ERC20Basic.deployed(10000);
+        const accountOne = accounts[0];
+        const accountTwo = accounts[1];
+        const amount = 15000;
+        await truffleAssert.reverts(ERC20BasicInstance.transfer(accountTwo,amount,{from:accountOne}),"amount can not exceed balance");
     });
 });
