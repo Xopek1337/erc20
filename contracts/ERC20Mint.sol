@@ -3,6 +3,7 @@ pragma solidity >=0.8.0 <0.9.0;
 
 import "./ERC20Base.sol";
 
+
 contract ERC20Mint is ERC20Base {
 
     address public owner;
@@ -11,7 +12,7 @@ contract ERC20Mint is ERC20Base {
         owner = msg.sender;
     }
 
-    function mint(address recipient, uint amount) public{
+    function mint(address recipient, uint amount) public {
         require(msg.sender == owner, "sender is not owner");
 
         totalSupply_ += amount;
