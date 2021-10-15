@@ -1,26 +1,7 @@
-/**
- * Use this file to configure your truffle project. It's seeded with some
- * common settings for different networks and features like migrations,
- * compilation and testing. Uncomment the ones you need or modify
- * them to suit your project as necessary.
- *
- * More information about configuration can be found at:
- *
- * trufflesuite.com/docs/advanced/configuration
- *
- * To deploy via Infura you'll need a wallet provider (like @truffle/hdwallet-provider)
- * to sign your transactions before they're sent to a remote public node. Infura accounts
- * are available for free at: infura.io/register.
- *
- * You'll also need a mnemonic - the twelve word phrase the wallet uses to generate
- * public/private key pairs. If you're publishing your code to GitHub make sure you load this
- * phrase from a file you've .gitignored so it doesn't accidentally become public.
- *
- */
+require("dotenv/config");
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
-const fs = require('fs');
-const mnemonic = fs.readFileSync(".env").toString().trim();
+const mnemonic = process.env.PRIVATE_KEY;
 
 module.exports = {
   /**
@@ -40,7 +21,7 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
     rinkeby: {
-      provider: () => new HDWalletProvider(mnemonic, `wss://rinkeby.infura.io/ws/v3/7fbc200d29094660a03c4510d6c01189`),
+      provider: () => new HDWalletProvider(mnemonic, process.env.RPC_NODE_RINKEBY),
       network_id: 4,       // Rinkeby
       gasprice: 1000000000,
       confirmations: 1,    // # of confs to wait between deployments. (default: 0)

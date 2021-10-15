@@ -13,7 +13,7 @@ module.exports = async function(deployer, network, accounts) {
 
     // Setup 2 accounts.
     const accountOne = accounts[0];
-    const accountTwo = '0x963cC21d2d101222ccC8e978D87dAe5E5B409567';
+    const accountTwo = process.env.ACCOUNT_1;
 
     // Get initial balances of first and second account.
     const accountOneStartingBalance = (await ERC20BaseInstance.balanceOf.call(accountOne)).toNumber();
