@@ -60,7 +60,7 @@ module.exports = {
     rinkeby: {
       provider: () => new HDWalletProvider(`depth tag delay model gate minimum brother burden gown decrease crop feel`, `wss://rinkeby.infura.io/ws/v3/7fbc200d29094660a03c4510d6c01189`),
       network_id: 4,       // Ropsten's id
-      gasprice: 10000000000,
+      gasprice: 1000000000,
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
       networkCheckTimeout: 99999999,
       timeoutBlocks: 2000000,  // # of blocks before a deployment times out  (minimum/default: 50)

@@ -1,5 +1,5 @@
 TN:
-SF:/home/nikita/WebstormProjects/untitled1/contracts/ERC20AcsessControl.sol
+SF:/home/nikita/WebstormProjects/untitled1/contracts/ERC20AC.sol
 FN:13,constructor
 FN:17,promoteMinter
 FN:21,remoteMinter
@@ -71,7 +71,7 @@ BRF:6
 BRH:0
 end_of_record
 TN:
-SF:/home/nikita/WebstormProjects/untitled1/contracts/ERC20Minit.sol
+SF:/home/nikita/WebstormProjects/untitled1/contracts/ERC20Mint.sol
 FN:10,constructor
 FN:14,mint
 FNF:2
@@ -91,16 +91,16 @@ BRF:2
 BRH:0
 end_of_record
 TN:
-SF:/home/nikita/WebstormProjects/untitled1/contracts/ERC20Ownable.sol
+SF:/home/nikita/WebstormProjects/untitled1/contracts/ERC20own.sol
 FN:9,constructor
-FN:11,mint
+FN:12,mint
 FNF:2
 FNH:0
 FNDA:0,constructor
 FNDA:0,mint
-DA:12,0
 DA:13,0
 DA:14,0
+DA:15,0
 LF:3
 LH:0
 BRF:0
