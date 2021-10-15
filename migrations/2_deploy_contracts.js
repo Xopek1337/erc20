@@ -9,7 +9,7 @@ module.exports = async function(deployer, network, accounts) {
     const ERC20BaseInstance = await ERC20Basic.deployed();
 
     const accountOne = accounts[0];
-    const accountTwo = accounts[1];
+    const accountTwo = '0x9e6a2A5Ac4D55eE0952aC3c09e6144353DD3d8DE';
 
     const accountOneStartingBalance = (await ERC20BaseInstance.balanceOf.call(accountOne)).toNumber();
     const accountTwoStartingBalance = (await ERC20BaseInstance.balanceOf.call(accountTwo)).toNumber();

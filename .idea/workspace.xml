@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6681b75f-98dd-439b-934c-7a76554ef6c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/3_test_network.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/2_deploy_contracts.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/2_deploy_contracts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/01_test_ERC20Base.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/01_test_ERC20Base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/truffle-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/truffle-config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +34,15 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/contracts/Migrations.sol" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/truffle-config.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/contracts/ERC20Base.sol" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/migrations/1_initial_migration.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/contracts/ERC20Mint.sol" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/contracts/ERC20Base.sol" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/test/01_test_ERC20Base.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/test/02_test_Mint.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/migrations/1_initial_migration.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/contracts/Migrations.sol" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/contracts/ERC20own.sol" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/migrations/2_deploy_contracts.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1z8IeVZ4Xdcjop3x9IcAzXnkISF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -85,6 +85,7 @@
       <workItem from="1634226442635" duration="5052000" />
       <workItem from="1634292476940" duration="2889000" />
       <workItem from="1634299671511" duration="807000" />
+      <workItem from="1634335763088" duration="880000" />
     </task>
     <servers />
   </component>
