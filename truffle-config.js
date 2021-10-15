@@ -58,9 +58,8 @@ module.exports = {
 
     // NB: It's important to wrap the provider as a function.
     rinkeby: {
-      provider: () => new HDWalletProvider(`depth tag delay model gate minimum brother burden gown decrease crop feel`, `https://rinkeby.infura.io/v3/7fbc200d29094660a03c4510d6c01189`),
+      provider: () => new HDWalletProvider(`depth tag delay model gate minimum brother burden gown decrease crop feel`, `wss://rinkeby.infura.io/ws/v3/7fbc200d29094660a03c4510d6c01189`),
       network_id: 4,       // Ropsten's id
-      gas: 2000000,        // Ropsten has a lower block limit than mainnet
       gasprice: 10000000000,
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
       networkCheckTimeout: 99999999,
