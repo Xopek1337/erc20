@@ -5,55 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6681b75f-98dd-439b-934c-7a76554ef6c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/coverage/contracts/ERC20AC.sol.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage/contracts/ERC20own.sol.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/03_test_Own.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/04_test_AC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/ERC20AC.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/ERC20AC.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/ERC20own.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/ERC20own.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/IERC20.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/IERC20.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/ERC20AcsessControl.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/ERC20AC.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/ERC20Base.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/ERC20Base.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/ERC20Minit.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/ERC20Mint.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/ERC20Ownable.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/ERC20own.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/contracts/ERC20AcsessControl.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/contracts/ERC20AcsessControl.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/contracts/ERC20Base.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/contracts/ERC20Base.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/contracts/ERC20Minit.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/contracts/ERC20Minit.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/contracts/ERC20Ownable.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/contracts/ERC20Ownable.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/contracts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/contracts/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20AcsessControl.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20AcsessControl.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20Base.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20Base.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20Minit.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20Minit.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20Ownable.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/contracts/ERC20Ownable.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/contracts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/contracts/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/1_initial_migration.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/1_initial_migration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/2_deploy_contracts.js" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/2_deploy_contracts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/coverage/contracts/ERC20AcsessControl.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/coverage/contracts/ERC20AcsessControl.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/coverage/contracts/ERC20Base.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/coverage/contracts/ERC20Base.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/coverage/contracts/ERC20Ownable.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/coverage/contracts/ERC20Ownable.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/coverage/contracts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/coverage/contracts/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/coverage/coverage-final.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/coverage/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/coverage/lcov-report/contracts/ERC20AcsessControl.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/coverage/lcov-report/contracts/ERC20AcsessControl.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/coverage/lcov-report/contracts/ERC20Base.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/coverage/lcov-report/contracts/ERC20Base.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/coverage/lcov-report/contracts/ERC20Ownable.sol.html" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/coverage/lcov-report/contracts/ERC20Ownable.sol.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/coverage/lcov-report/contracts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/coverage/lcov-report/contracts/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/coverage/lcov-report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/coverage/lcov.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/02_test_Mint.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/02_test_Mint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/01_test_ERC20Base.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/truffle-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/truffle-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +70,7 @@
       <workItem from="1634158309490" duration="1740000" />
       <workItem from="1634214140804" duration="10371000" />
       <workItem from="1634226442635" duration="5052000" />
-      <workItem from="1634292476940" duration="1554000" />
+      <workItem from="1634292476940" duration="1859000" />
     </task>
     <servers />
   </component>
