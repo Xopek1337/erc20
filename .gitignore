@@ -1,5 +1,6 @@
 build/contracts
-.idea
+.idea/
 node_modules
 .env
 yarn-error.log
+coverage/
