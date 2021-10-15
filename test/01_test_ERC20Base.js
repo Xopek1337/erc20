@@ -13,6 +13,7 @@ describe('ERC20TestBase', function () {
 
         assert.equal(balance.valueOf(), 10000, "10000 wasn't in the first account");
     });
+
     it('should put 20000 ERC20Basic in the two accounts account', async () => {
         const ERC20BasicInstance = await ERC20Basic.deployed(10000);
         const accountOne = accounts[0];
