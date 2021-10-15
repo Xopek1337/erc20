@@ -38,7 +38,7 @@ contract ERC20Base is IERC20 {
     }
 
     function transfer(address recipient, uint amount) external override returns (bool) {
-        require(amount <= balances[msg.sender]);
+        require(amount <= balances[msg.sender], "amount can not exceed balance");
 
         balances[msg.sender] -= amount;
         balances[recipient] += amount;
@@ -61,8 +61,8 @@ contract ERC20Base is IERC20 {
     }
 
     function transferFrom(address sender, address recipient, uint amount) external override returns (bool) {
-        require(amount <= balances[sender]);
-        require(amount <= allowed[sender][msg.sender]);
+        require(amount <= balances[sender], "amount can not exceed balance");
+        require(amount <= allowed[sender][msg.sender], "amount did not approve");
 
         balances[sender] -= amount;
         allowed[sender][msg.sender] -= amount;

@@ -7,10 +7,10 @@ import "./ERC20Base.sol";
 
 
 
-abstract contract ERC20AC is IERC20, AccessControl,ERC20Base{
+contract ERC20AC is IERC20, AccessControl,ERC20Base{
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
-    constructor() {
+    constructor(uint initialSupply_) ERC20Base(initialSupply_) {
         _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
     }
     

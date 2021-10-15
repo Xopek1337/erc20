@@ -115,7 +115,10 @@
 70
 71
 72
-73</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+73
+74
+75
+76</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,34 +142,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,6 +159,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -184,13 +189,16 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
 pragma solidity &gt;=0.8.0 &lt;0.9.0;
-interface IERC20 {
 &nbsp;
+&nbsp;
+&nbsp;
+interface IERC20 {
     function totalSupply() external view returns (uint);
     function balanceOf(address account) external view returns (uint);
     function allowance(address owner, address spender) external view returns (uint);
@@ -225,10 +233,10 @@ contract ERC20Base is IERC20 {
     }
 &nbsp;
 <span class="fstat-no" title="function not covered" >    function transfer(address recipient, uint amount) external override returns (bool) {</span>
-<span class="cstat-no" title="statement not covered" >        require(amount &lt;= balances[msg.sender])</span>;
+<span class="cstat-no" title="statement not covered" >        require(amount &lt;= balances[msg.sender], "amount can not exceed balance")</span>;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        balances[msg.sender] -=amount</span>;
-<span class="cstat-no" title="statement not covered" >        balances[recipient] +=amount</span>;
+<span class="cstat-no" title="statement not covered" >        balances[msg.sender] -= amount</span>;
+<span class="cstat-no" title="statement not covered" >        balances[recipient] += amount</span>;
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        emit Transfer(msg.sender, recipient, amount);</span>
 &nbsp;
@@ -248,14 +256,15 @@ contract ERC20Base is IERC20 {
     }
 &nbsp;
 <span class="fstat-no" title="function not covered" >    function transferFrom(address sender, address recipient, uint amount) external override returns (bool) {</span>
-<span class="cstat-no" title="statement not covered" >        require(amount &lt;= balances[sender])</span>;
-<span class="cstat-no" title="statement not covered" >        require(amount &lt;= allowed[sender][msg.sender])</span>;
+<span class="cstat-no" title="statement not covered" >        require(amount &lt;= balances[sender], "amount can not exceed balance")</span>;
+<span class="cstat-no" title="statement not covered" >        require(amount &lt;= allowed[sender][msg.sender], "amount did not approve")</span>;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        balances[sender] -=amount</span>;
-<span class="cstat-no" title="statement not covered" >        allowed[sender][msg.sender] -=amount</span>;
-<span class="cstat-no" title="statement not covered" >        balances[recipient] +=amount</span>;
+<span class="cstat-no" title="statement not covered" >        balances[sender] -= amount</span>;
+<span class="cstat-no" title="statement not covered" >        allowed[sender][msg.sender] -= amount</span>;
+<span class="cstat-no" title="statement not covered" >        balances[recipient] += amount</span>;
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        emit Transfer(sender, recipient, amount);</span>
+        
 <span class="cstat-no" title="statement not covered" >        return true;</span>
     }
 }
@@ -265,7 +274,7 @@ contract ERC20Base is IERC20 {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Oct 11 2021 19:28:16 GMT+0200 (Восточная Европа, стандартное время)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 13 2021 19:35:37 GMT+0200 (Восточная Европа, стандартное время)
 </div>
 </div>
 <script src="../prettify.js"></script>

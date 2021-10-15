@@ -12,7 +12,7 @@ contract ERC20Minit is ERC20Base {
     }
 
     function mint(address recipient, uint amount) public{
-        require(msg.sender == owner);
+        require(msg.sender == owner, "sender is not owner");
 
         totalSupply_ += amount;
         balances[recipient] += amount;

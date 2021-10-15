@@ -82,5 +82,21 @@ describe('ERC20TestBase', function () {
         const accountTwo = accounts[1];
         const amount = 15000;
         await truffleAssert.reverts(ERC20BasicInstance.transfer(accountTwo,amount,{from:accountOne}),"amount can not exceed balance");
+    }).timeout(10000);
+    it('should not transfer token if amount exceed balance', async () => {
+        const ERC20BasicInstance = await ERC20Basic.deployed(10000);
+        const accountOne = accounts[0];
+        const accountTwo = accounts[1];
+        const amount = 15000;
+        await truffleAssert.reverts(ERC20BasicInstance.transferFrom(accountOne,accountTwo,amount,{from:accountOne}),"amount can not exceed balance");
+    }).timeout(10000);
+    it('should not approve token', async () => {
+        const ERC20BasicInstance = await ERC20Basic.deployed(10000);
+        const accountOne = accounts[0];
+        const accountTwo = accounts[1];
+        const amount = 5000;
+        const approveAmount = 4000;
+        await ERC20BasicInstance.approve(accountTwo, approveAmount,{ from: accountOne });
+        await truffleAssert.reverts(ERC20BasicInstance.transferFrom(accountOne,accountTwo,amount,{from:accountOne}),"amount did not approve");
     });
 });

@@ -1,6 +1,6 @@
 let accounts;
 
-const ERC20Mint = artifacts.require("./ERC20Minit");
+const ERC20Mint = artifacts.require("./ERC20Mint");
 const truffleAssert = require('truffle-assertions');
 describe('ERC20TestMinit', function () {
     beforeEach(async () => {
@@ -19,9 +19,11 @@ describe('ERC20TestMinit', function () {
 
         assert.equal(accountEndingBalance, accountStartingBalance + amount, "Amount wasn't correctly taken eth");
     });
-    it('should not transfer token if amount exceed balance', async () => {
+    it('sender should be an owner', async () => {
         const ERC20MintInstance = await ERC20Mint.deployed(10000);
+        const accountOne = accounts[0];
+        const accountTwo = accounts[1];
         const amount = 10;
-        await truffleAssert.reverts(ERC20MintInstance.mint(accounts[0],amount,{from:accounts[1]}),"amount can not exceed balance");
-    });
+        await truffleAssert.reverts(ERC20MintInstance.mint(accountOne,amount,{from:accountTwo}),"sender is not owner");
+    }).timeout(10000);
 });

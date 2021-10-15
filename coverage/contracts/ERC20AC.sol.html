@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for contracts/ERC20AcsessControl.sol</title>
+    <title>Code coverage report for contracts/ERC20AC.sol</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> ERC20AcsessControl.sol
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> ERC20AC.sol
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>6/6</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -88,23 +88,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
@@ -116,27 +116,27 @@ import "./ERC20Base.sol";
 &nbsp;
 &nbsp;
 &nbsp;
-abstract contract ERC20AC is IERC20, AccessControl,ERC20Base{
+contract ERC20AC is IERC20, AccessControl,ERC20Base{
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 &nbsp;
-<span class="fstat-no" title="function not covered" >    constructor() {</span>
-<span class="cstat-no" title="statement not covered" >        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender)</span>;
+    constructor(uint initialSupply_) ERC20Base(initialSupply_) {
+        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
     }
     
-<span class="fstat-no" title="function not covered" >    function promoteMinter(address minter) public onlyRole(DEFAULT_ADMIN_ROLE){</span>
-<span class="cstat-no" title="statement not covered" >        grantRole(MINTER_ROLE, minter)</span>;
+    function promoteMinter(address minter) public onlyRole(DEFAULT_ADMIN_ROLE){
+        grantRole(MINTER_ROLE, minter);
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function remoteMinter(address minter) public onlyRole(DEFAULT_ADMIN_ROLE){</span>
-<span class="cstat-no" title="statement not covered" >        revokeRole(MINTER_ROLE, minter)</span>;
+    function remoteMinter(address minter) public onlyRole(DEFAULT_ADMIN_ROLE){
+        revokeRole(MINTER_ROLE, minter);
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function mint(address recipient, uint amount) public onlyRole(MINTER_ROLE){</span>
-<span class="cstat-no" title="statement not covered" >        totalSupply_ += amount</span>;
+    function mint(address recipient, uint amount) public onlyRole(MINTER_ROLE){
+        totalSupply_ += amount;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        balances[recipient] += amount</span>;
+        balances[recipient] += amount;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        emit Transfer(address(0), recipient, amount);</span>
+        emit Transfer(address(0), recipient, amount);
     }
 }
 &nbsp;</pre></td></tr>
@@ -145,7 +145,7 @@ abstract contract ERC20AC is IERC20, AccessControl,ERC20Base{
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 13 2021 19:35:37 GMT+0200 (Восточная Европа, стандартное время)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 14 2021 15:05:53 GMT+0200 (Восточная Европа, стандартное время)
 </div>
 </div>
 <script src="../prettify.js"></script>
