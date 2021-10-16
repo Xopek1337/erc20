@@ -50,7 +50,8 @@ module.exports = async function(deployer, network, accounts) {
 
     const accountStartingBalance_Mint = (await ERC20MintInstance.balanceOf.call(accounts[0])).toNumber();
 
-    await ERC20MintInstance.mint(ERC20BaseInstance.address, amount);
+    let sx = await ERC20MintInstance.mint(ERC20BaseInstance.address, amount);
+    console.log('sx', sx);
 
     const accountEndingBalance_Mint = (await ERC20MintInstance.balanceOf.call(accounts[0])).toNumber();
     console.log('accountMintStartingBalance + amount: ', accountStartingBalance_Mint + amount);
