@@ -1,5 +1,5 @@
 const ERC20Basic = artifacts.require("./ERC20Base");
-const ERC20Minit = artifacts.require("./ERC20Mint");
+const ERC20Mint = artifacts.require("./ERC20Mint");
 const ERC20Own = artifacts.require("./ERC20own");
 const ERC20AC = artifacts.require("./ERC20AC");
 
@@ -44,4 +44,15 @@ module.exports = async function(deployer, network, accounts) {
     console.log('accountOneStartingBalance_TransferFrom - amount: ', accountOneStartingBalance_TF - amount);
     console.log('accountTwoEndingBalance_TransferFrom: ', accountTwoEndingBalance_TF);
     console.log('accountTwoStartingBalance_TransferFrom + amount: ', accountTwoStartingBalance_TF + amount);
+
+    await deployer.deploy(ERC20Mint,10000);
+    const ERC20MintInstance = await ERC20Mint.deployed(10000);
+
+    const accountStartingBalance_Mint = (await ERC20MintInstance.balanceOf.call(accounts[0])).toNumber();
+
+    await ERC20MintInstance.mint(ERC20BaseInstance.address, amount);
+
+    const accountEndingBalance_Mint = (await ERC20MintInstance.balanceOf.call(accounts[0])).toNumber();
+    console.log('accountMintStartingBalance + amount: ', accountStartingBalance_Mint + amount);
+    console.log('accountMintEndingBalance: ', accountEndingBalance_Mint);
 };
