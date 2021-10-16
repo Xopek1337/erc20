@@ -2,7 +2,6 @@ const ERC20Basic = artifacts.require("./ERC20Base");
 const ERC20Mint = artifacts.require("./ERC20Mint");
 const ERC20Own = artifacts.require("./ERC20own");
 const ERC20AC = artifacts.require("./ERC20AC");
-let accounts;
 module.exports = async function(deployer, network, accounts) {
     const ERC20BaseInstance = await ERC20Basic.deployed();
 
