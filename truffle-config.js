@@ -18,7 +18,7 @@
  *
  */
 
-require("dotenv/config")
+require('dotenv').config();
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const mnemonic = process.env.SECRET_PHRASE;
 
@@ -59,7 +59,7 @@ module.exports = {
 
     // NB: It's important to wrap the provider as a function.
     rinkeby: {
-      provider: () => new HDWalletProvider('depth tag delay model gate minimum brother burden gown decrease crop feel', 'wss://rinkeby.infura.io/ws/v3/7fbc200d29094660a03c4510d6c01189'),
+      provider: () => new HDWalletProvider(mnemonic, process.env.RPC_NODE_RINKEBY),
       network_id: 4,       // Ropsten's id
       gasprice: 1000000000,
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)

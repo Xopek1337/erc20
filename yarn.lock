@@ -379,7 +379,7 @@
 
 "@openzeppelin/contracts@^4.3.2":
   version "4.3.2"
-  resolved "https://registry.npmjs.org/@openzeppelin/contracts/-/contracts-4.3.2.tgz"
+  resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-4.3.2.tgz#ff80affd6d352dbe1bbc5b4e1833c41afd6283b6"
   integrity sha512-AybF1cesONZStg5kWf6ao9OlqTZuPqddvprc0ky7lrUVOjXeKpmQ2Y9FK+6ygxasb+4aic4O5pneFBfwVsRRRg==
 
 "@sindresorhus/is@^0.14.0":
@@ -408,7 +408,7 @@
 
 "@truffle/hdwallet-provider@^1.5.1":
   version "1.5.1"
-  resolved "https://registry.npmjs.org/@truffle/hdwallet-provider/-/hdwallet-provider-1.5.1.tgz"
+  resolved "https://registry.yarnpkg.com/@truffle/hdwallet-provider/-/hdwallet-provider-1.5.1.tgz#05522f70e713fe1a4966706bb13960133b920e96"
   integrity sha512-sVt78Idr6k2Loi40Igc3A8ncy4zvUWdWaYYNRGaBPq67usR34tkp+RH+23PqU+alk44P0JwG3fNNEg1Hqwa3Xw==
   dependencies:
     "@ethereumjs/common" "^2.4.0"
@@ -1355,6 +1355,11 @@ dom-walk@^0.1.0:
   version "0.1.2"
   resolved "https://registry.npmjs.org/dom-walk/-/dom-walk-0.1.2.tgz"
   integrity sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
+
+dotenv@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
+  integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -4156,7 +4161,7 @@ tough-cookie@~2.5.0:
 
 truffle-assertions@^0.9.2:
   version "0.9.2"
-  resolved "https://registry.npmjs.org/truffle-assertions/-/truffle-assertions-0.9.2.tgz"
+  resolved "https://registry.yarnpkg.com/truffle-assertions/-/truffle-assertions-0.9.2.tgz#0f8360f53ad92b6d8fdb8ceb5dce54c1fc392e23"
   integrity sha512-9g2RhaxU2F8DeWhqoGQvL/bV8QVoSnQ6PY+ZPvYRP5eF7+/8LExb4mjLx/FeliLTjc3Tv1SABG05Gu5qQ/ErmA==
   dependencies:
     assertion-error "^1.1.0"
