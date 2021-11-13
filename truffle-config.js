@@ -63,8 +63,8 @@ module.exports = {
       network_id: 4,       // Ropsten's id
       gasprice: 1000000000,
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-      networkCheckTimeout: 99999999,
-      timeoutBlocks: 2000000,  // # of blocks before a deployment times out  (minimum/default: 50)
+      networkCheckTimeout: 9999990,
+      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true    // Skip dry run before migrations? (default: false for public nets )
     },
     // Useful for private networks
@@ -78,7 +78,7 @@ module.exports = {
 
   // Set default mocha options here, use special reporters etc.
   mocha: {
-    // timeout: 100000
+     timeout: 100000
   },
 
   // Configure your compilers

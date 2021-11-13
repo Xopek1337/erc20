@@ -1,6 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 require("solidity-coverage");
 require('@nomiclabs/hardhat-ethers');
+require("@nomiclabs/hardhat-etherscan");
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
@@ -25,9 +26,12 @@ module.exports = {
 
   networks: {
     rinkeby: {
-      url: `https://rinkeby.infura.io/v3/7fbc200d29094660a03c4510d6c01189`,
-      accounts: [`e6fe3fbe8a1773bbd125137ac0fd30bdc81e9a31cc73ef6a43ba47b09b7a4aad`]
+      url: process.env.RPC_NODE_RINKEBY,
+      accounts: [process.env.PRIVATE_KEY]
     },
+  },
+  etherscan: {
+    apiKey: "UM88WR6PRIDDS2TDCCYYGGR92TWRVU7TY3"
   },
 
   plugins:["solidity-coverage"],
