@@ -1,23 +1,26 @@
-let accounts;
-
-const ERC20Own = artifacts.require("./ERC20own");
-const truffleAssert = require('truffle-assertions');
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
 
 describe('ERC20TestOwn', function () {
     beforeEach(async () => {
         accounts = await web3.eth.getAccounts();
     });
-    it('should make token correctly', async () => {
-        const ERC20OwnInstance = await ERC20Own.deployed(10000);
 
-        const accountStartingBalance = (await ERC20OwnInstance.balanceOf.call(accounts[0])).toNumber();
+    it('should make token correctly', async () => {
+        const ERC20OwnInstance = await ethers.getContractFactory("ERC20own");
+        const ERC20Own = await ERC20OwnInstance.deploy(10000);
+        await ERC20Own.deployed();
+
+        const accountStartingBalance = (await ERC20Own.balanceOf(accounts[0])).toNumber();
 
         const amount = 10;
 
-        await ERC20OwnInstance.mint(accounts[0], amount);
+        const mint = (await ERC20Own.mint(accounts[0], amount));
 
-        const accountEndingBalance = (await ERC20OwnInstance.balanceOf.call(accounts[0])).toNumber();
+        await mint.wait();
 
-        assert.equal(accountEndingBalance, accountStartingBalance + amount, "Amount wasn't correctly taken eth");
+        const accountEndingBalance = (await ERC20Own.balanceOf(accounts[0]));
+        
+        expect(await accountEndingBalance).to.equal(accountStartingBalance + amount);
     });
 });

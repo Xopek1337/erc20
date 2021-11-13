@@ -1,29 +1,41 @@
-let accounts;
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
 
-const ERC20Mint = artifacts.require("./ERC20Mint");
-const truffleAssert = require('truffle-assertions');
 describe('ERC20TestMinit', function () {
-    beforeEach(async () => {
-        accounts = await web3.eth.getAccounts();
-    });
-    it('should make token correctly', async () => {
-        const ERC20MintInstance = await ERC20Mint.deployed(10000);
+    let accounts;
 
-        const accountStartingBalance = (await ERC20MintInstance.balanceOf.call(accounts[0])).toNumber();
+  before(async function () {
+    accounts = await web3.eth.getAccounts();
+  });
+    it('should make token correctly', async () => {
+        const ERC20MintInstance = await ethers.getContractFactory("ERC20Mint");
+        const ERC20Mint = await ERC20MintInstance.deploy(10000);
+        await ERC20Mint.deployed();
+
+        const accountStartingBalance = (await ERC20Mint.balanceOf(accounts[0])).toNumber();
 
         const amount = 10;
 
-        await ERC20MintInstance.mint(accounts[0], amount);
+        const mint = (await ERC20Mint.mint(accounts[0], amount));
 
-        const accountEndingBalance = (await ERC20MintInstance.balanceOf.call(accounts[0])).toNumber();
+        await mint.wait();
 
-        assert.equal(accountEndingBalance, accountStartingBalance + amount, "Amount wasn't correctly taken eth");
+        const accountEndingBalance = (await ERC20Mint.balanceOf(accounts[0]));
+        
+        expect(await accountEndingBalance).to.equal(accountStartingBalance + amount);
     });
-    it('sender should be an owner', async () => {
-        const ERC20MintInstance = await ERC20Mint.deployed(10000);
+   /*it('sender should be an owner', async () => {
+        const ERC20MintInstance = await ethers.getContractFactory("ERC20Mint");
+        const ERC20Mint = await ERC20MintInstance.deploy(10000);
+        await ERC20Mint.deployed();
+
         const accountOne = accounts[0];
         const accountTwo = accounts[1];
+        const accountThree = process.env.ACCOUNT_1;
+
         const amount = 10;
-        await truffleAssert.reverts(ERC20MintInstance.mint(accountOne,amount,{from:accountTwo}),"sender is not owner");
-    }).timeout(10000);
+
+        //await expect(ERC20Mint.mint(accounts[0],amount,{from:accounts[1]})).to.be.revertedWith("sender is not owner");
+        await expect(ERC20Mint.connect(accounts[1].address).mint(accounts[0].address, amount)).to.be.revertedWith("sender is not owner");
+    }).timeout(10000);*/
 });
