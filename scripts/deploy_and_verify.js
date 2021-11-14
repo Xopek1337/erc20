@@ -11,8 +11,6 @@ async function main() {
     
     console.log("Token address:", ERC20Basic.address);
 
-   
-
     await hre.run("verify:verify", {
         address: ERC20Basic.address,
         constructorArguments: ["10000"],
