@@ -6,4 +6,6 @@ const ERC20AC = artifacts.require("./ERC20AC");
 module.exports = async function(deployer, network, accounts) {
     await deployer.deploy(ERC20Basic,10000);
     await deployer.deploy(ERC20Mint,10000);
+    await deployer.deploy(ERC20Own,10000);
+    await deployer.deploy(ERC20AC,10000);
 };

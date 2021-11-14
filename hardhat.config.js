@@ -22,7 +22,7 @@ const mnemonic = process.env.SECRET_PHRASE;
 require("@nomiclabs/hardhat-truffle5");
 
 module.exports = {
-  solidity: "0.8.4",
+  solidity: "0.8.10",
 
   networks: {
     rinkeby: {

@@ -3,9 +3,6 @@ const ERC20Mint = artifacts.require("./ERC20Mint");
 const ERC20Own = artifacts.require("./ERC20own");
 const ERC20AC = artifacts.require("./ERC20AC");
 
-const hre = require("hardhat");
-const network = hre.network.name;
-
 var log4js = require("log4js");
 var logger = log4js.getLogger();
 logger.level = "info";
@@ -56,7 +53,6 @@ module.exports = async function(deployer, network, accounts) {
     logger.info('accountOneStartingBalance_TransferFrom - amount: ', accountOneStartingBalance_TF - amount);
     logger.info('accountTwoEndingBalance_TransferFrom: ', accountTwoEndingBalance_TF);
     logger.info('accountTwoStartingBalance_TransferFrom + amount: ', accountTwoStartingBalance_TF + amount);
-
 };
 
 

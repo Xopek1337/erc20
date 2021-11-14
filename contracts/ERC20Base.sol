@@ -16,8 +16,8 @@ interface IERC20 {
 }
 
 contract ERC20Base is IERC20 {
-    string public name = "ERC20Base";
-    string public symbol = "ERC";
+    string public name = "ERC20Basic";
+    string public symbol = "ERCB";
     uint8 public decimals = 18;
 
     mapping(address => uint256) balances;
