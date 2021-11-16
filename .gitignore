@@ -4,6 +4,7 @@ node_modules
 .env
 yarn-error.log
 coverage/
+.eslintrc.js
 
 node_modules
 .env
